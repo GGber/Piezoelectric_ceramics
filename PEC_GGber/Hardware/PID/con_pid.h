@@ -20,4 +20,10 @@
 #define OUTPUT_GAIN_LOOP    1     //开环增益模式
 #define SPWM_OUTPUT         0     //SPWM模式
 
+#define ADAS_FREE           2u     //ADAS空闲
+#define ADAS_OK             1u     //转换成功
+#define ADAS_ERROR          0u     //转换失败
+
+extern uint16_t adasFlag;         //SIGNAL转换标志
+
 #endif /* HARDWARE_PID_CON_PID_H_ */

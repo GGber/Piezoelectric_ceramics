@@ -49,8 +49,7 @@ __interrupt void epwm3_isr(void);
 __interrupt void epwm3_isr(void){
 
     //半桥输出控制任务
-//    systemControl();
-
+    systemControl();
     // Clear INT flag for this timer
     EPwm3Regs.ETCLR.bit.INT = 1;
     // Acknowledge this interrupt to receive more interrupts from group 3

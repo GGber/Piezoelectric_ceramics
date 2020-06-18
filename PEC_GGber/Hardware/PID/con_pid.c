@@ -9,17 +9,17 @@
 #include "con_pid.h"
 
 float OUTPUT_V_EXPECT = 1.0f;
+uint16_t adasFlag=0;            //SIGNAL转换标志
 
 void systemControl(void){
 
     float cmp_val;
-//
-//    if(adasFlag == 2){
-//        sensor_update();
-//        adasFlag = 1;
-//    }
-//
-//
+
+    if(adasFlag == ADAS_ERROR)//ad还没有准备好
+        return;
+
+    adasFlag=ADAS_FREE;
+
 #if OUTPUT_GAIN_LOOP
 //    cmp_val = (int32_t)SPwm_st.ReloadValue*BASELINE;
 //    cmp_val += (int32_t)SPwm_st.ReloadValue/2 * sensor.sigal * GAIN / ((int32_t)INPUT_TOTAL_V/2*1000) * OUTPUT_V_EXPECT;
@@ -32,7 +32,7 @@ void systemControl(void){
 //    }
 
     cmp_val = (EPWM_nature_com.ReloadValue>>1);
-    cmp_val *= 1 + ((int32_t)adas_sensor_origin_data.sigal<<8) * (1e-6) * (OUTPUT_V_EXPECT);//计算装载值
+    cmp_val *= 1 + ((int32_t)adas_sensor_origin_data.signal<<8) * (1e-6) * (OUTPUT_V_EXPECT);//计算装载值
 
     if(cmp_val<0){
         cmp_val = 0;

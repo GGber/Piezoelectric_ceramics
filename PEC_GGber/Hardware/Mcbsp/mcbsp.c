@@ -157,7 +157,8 @@ void adas3022_StartWork(void){
 #ifdef IOC
     currentAD = Mcbsp_read();
 #else
-    adas_sensor_origin_data.sigal = Mcbsp_read();
+    adas_sensor_origin_data.signal = Mcbsp_read();
+    adasFlag=ADAS_OK;//×ª»»Íê±Ï
 #endif
 }
 

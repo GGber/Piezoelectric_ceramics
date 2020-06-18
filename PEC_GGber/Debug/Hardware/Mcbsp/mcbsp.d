@@ -36,6 +36,9 @@ Hardware/Mcbsp/mcbsp.obj: D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.L
 Hardware/Mcbsp/mcbsp.obj: D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/machine/_stdint.h
 Hardware/Mcbsp/mcbsp.obj: D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/sys/_stdint.h
 Hardware/Mcbsp/mcbsp.obj: D:/workspace_v9_2/PEC_GGber/Hardware/System/system.h
+Hardware/Mcbsp/mcbsp.obj: D:/workspace_v9_2/PEC_GGber/Hardware/PID/con_pid.h
+Hardware/Mcbsp/mcbsp.obj: D:/workspace_v9_2/PEC_GGber/Hardware/EPWM/epwm.h
+Hardware/Mcbsp/mcbsp.obj: D:/workspace_v9_2/PEC_GGber/Hardware/Mcbsp/mcbsp.h
 
 ../Hardware/Mcbsp/mcbsp.c: 
 ../Hardware/Mcbsp/mcbsp.h: 
@@ -73,3 +76,6 @@ D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/machine/_types.
 D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/machine/_stdint.h: 
 D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/sys/_stdint.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/System/system.h: 
+D:/workspace_v9_2/PEC_GGber/Hardware/PID/con_pid.h: 
+D:/workspace_v9_2/PEC_GGber/Hardware/EPWM/epwm.h: 
+D:/workspace_v9_2/PEC_GGber/Hardware/Mcbsp/mcbsp.h: 

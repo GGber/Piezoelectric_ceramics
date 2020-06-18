@@ -37,7 +37,9 @@ main.obj: D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/machi
 main.obj: D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/sys/_stdint.h
 main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/LED/led.h
 main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/Mcbsp/mcbsp.h
+main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/PID/con_pid.h
 main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/EPWM/epwm.h
+main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/Mcbsp/mcbsp.h
 main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/FAN/fan_epwm.h
 main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/DSP_ADC/dsp_adc.h
 main.obj: D:/workspace_v9_2/PEC_GGber/Hardware/SCI/sci.h
@@ -79,7 +81,9 @@ D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/machine/_stdint
 D:/ti/ccs920/ccs/tools/compiler/ti-cgt-c2000_18.12.3.LTS/include/sys/_stdint.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/LED/led.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/Mcbsp/mcbsp.h: 
+D:/workspace_v9_2/PEC_GGber/Hardware/PID/con_pid.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/EPWM/epwm.h: 
+D:/workspace_v9_2/PEC_GGber/Hardware/Mcbsp/mcbsp.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/FAN/fan_epwm.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/DSP_ADC/dsp_adc.h: 
 D:/workspace_v9_2/PEC_GGber/Hardware/SCI/sci.h: 

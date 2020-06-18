@@ -7,13 +7,15 @@
 #include "fan_epwm.h"
 #include "dsp_adc.h"
 #include "sci.h"
-
+#include "con_pid.h"
 
 /**
  * main.c
  */
-int main(void)
+void main(void)
 {
+    static uint32_t signal_eror_count=0;
+
     sys_init();         //System Init
 
     Led_Init();         //LED Init
@@ -33,11 +35,40 @@ int main(void)
     while(1)
     {
 
+        switch(adasFlag)
+        {
+            case ADAS_OK:
+                if(adas_sensor_origin_data.signal<15&adas_sensor_origin_data.signal>-5)
+                    signal_eror_count++; else  signal_eror_count=0;
+                if(signal_eror_count>=100000)
+                {
+                    ePWM_DISABLE();
+                    adasFlag=ADAS_ERROR;
+                    signal_eror_count=100000;
+                }else{
+                    ePWM_EN();
+                    signal_eror_count=0;
+                }
+                break;
+
+            case ADAS_ERROR:
+                adasFlag=ADAS_FREE;
+//                ePWM_DISABLE();
+                break;
+
+            case ADAS_FREE:
+                adas3022_StartWork(); break;
+
+            default:
+                adasFlag=ADAS_FREE; break;
+        }
+
         if(led_Task_Count>=200){
             Led_Display(led1, TOG);
             led_Task_Count = 0;
         }
-    }
 
-	return 0;
+        delay_us(1);
+
+    }
 }

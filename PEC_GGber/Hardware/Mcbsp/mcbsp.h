@@ -14,7 +14,7 @@
 #include "DSP2833x_Examples.h"   // DSP2833x Examples Include File
 #include "stdint.h"
 #include "system.h"
-
+#include "con_pid.h"
 /*****************************************ADAD3022_底层驱动代码*******************************************************************/
 
 void McBSP_Init(void);
@@ -72,7 +72,7 @@ struct SENSOR_VAL{
 
     float u;
     float i;
-    int16_t sigal;
+    int16_t signal;
 };
 typedef struct SENSOR_VAL SENSOR;
 extern SENSOR adas_sensor_origin_data;//AD采集到的原始数据全局变量

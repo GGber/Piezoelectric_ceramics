@@ -70,7 +70,7 @@ void cpuTimer0Init(void)
 {
     // CPU定时器初始化
     InitCpuTimers();                            // Only initialize the Cpu Timers
-    ConfigCpuTimer( &CpuTimer0, 150, 1000u );  // (in uSeconds)
+    ConfigCpuTimer( &CpuTimer0, 150, 1000u );  // (in uSeconds) 1ms
     CpuTimer0Regs.TCR.all = 0x4000;             // Use write-only instruction to set TSS bit = 0
 
     EALLOW;                       // This is needed to write to EALLOW protected registers
